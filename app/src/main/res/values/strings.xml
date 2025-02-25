@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Minecraft图形粒子</string>
+    
+    <string name="main_particle">绘制</string>
+    <string name="main_save">保存</string>
+    <string name="main_about">关于</string>
+    
+    <string name="action_save">保存</string>
+    <string name="action_reset">重置</string>
+    <string name="action_remove">移除</string>
+    <string name="action_sort">排序</string>
+    <string name="action_close">关闭</string>
+    
+    <string name="dialog_update_content_title">更新内容</string>
+    <string name="dialog_update_content_message">
+        -----2025-2-23(1.4.0) \n1.新增图形 \n2.修复一些问题
+        \n\n-----2025-2-05(1.3.2) \n1.绘制和修改界面增加副标题 \n2.保存时可调节图片的大小
+        \n\n-----2025-2-05(1.3.1) \n1.解决粒子搜索栏的可滑动问题 \n2.修复全部因屏幕旋转引发的Bug \n3.保存项目的修改目前可使用了
+        \n\n-----2025-1-18(1.3.0) \n修复部分因屏幕旋转引发的Bug
+        \n\n-----2025-1-13(1.2-fix) \n修复安卓13及以下兼容问题
+        \n\n-----2025-1-12(1.2) \n1.修复保存问题 \n2.粒子搜索更全面且排序
+        \n\n-----2025-1-11(1.1) \n1.UI界面使用Material Design \n2.粒子种类支持搜索 \n3.新增"更新内容"
+        \n\n-----2024-12-22(1.0) \n初始版本
+    </string>
+    
+    <string name="dialog_draw_save_message"></string>
+    <string name="dialog_draw_save_name_hint">输入保存项目名称</string>
+    <string name="dialog_draw_save_name_error">名称不能为空</string>
+    <string name="dialog_draw_save_width_hint">输入保存后图片宽度</string>
+    <string name="dialog_draw_save_width_error">宽度输入有误</string>
+    <string name="dialog_draw_save_height_hint">输入保存后图片高度</string>
+    <string name="dialog_draw_save_height_error">高度输入有误</string>
+    <string name="dialog_draw_save_param_error">参数输入错误</string>
+    <string name="dialog_draw_save_ps">注:图片大小严重影响保存页面的加载速度</string>
+    <string name="dialog_draw_reset_message">是否确定重置，所有参数的值都将恢复默认值。</string>
+    <string name="dialog_param_particle_category_title">粒子种类</string>
+    <string name="dialog_param_particle_category_searchview_hint">搜索</string>
+    <string name="dialog_param_particle_category_searchbar_hint">搜索粒子种类</string>
+    <string name="dialog_param_particle_category_text">点击上方搜索栏进行搜索</string>
+    
+    <string name="dialog_graphics_help_title">操作帮助</string>
+    <string name="dialog_graphics_help_message">前后移动:双指放缩\n左右移动:双指平行左右移动\n上下移动:双指同一条竖直线上上下移动\n垂直旋转:单指上下移动\n水平旋转:单指左右移动\n图形坐标刷新:点击图形Tab项</string>
+    
+    <string name="dialog_save_item_remove_message">是否移除此保存项目，这将不可恢复。</string>
+    
+    <string name="draw_category_regular">规则图形</string>
+    <string name="draw_category_line">曲直线</string>
+    <string name="draw_category_math">数学</string>
+    <string name="draw_category_special">特殊</string>
+    
+    <string name="type_circle">正圆</string>
+    <string name="type_ellipse">椭圆</string>
+    <string name="type_polygon">多边形</string>
+    <string name="type_star">星形</string>
+    <string name="type_sphere">球体</string>
+    <string name="type_line">直线</string>
+    <string name="type_parabola">抛物线</string>
+    <string name="type_helix">螺旋线</string>
+    <string name="type_spiralparabola">螺旋抛物线</string>
+    <string name="type_arc">圆弧</string>
+    <string name="type_fourier">傅里叶级数</string>
+    <string name="type_function">函数</string>
+    <string name="type_image">图片</string>
+    
+    <string name="description_circle">平面上所有与给定点（圆心）距离相等的点的集合。</string>
+    <string name="description_ellipse">平面上所有满足到两个固定点（焦点）的距离之和为常数的点的集合。</string>
+    <string name="description_polygon">由有限条线段依次首尾相接围成的封闭平面图形。</string>
+    <string name="description_star">一种特殊的多边形，其顶点按照某种规则排列，使得部分边相交。</string>
+    <string name="description_sphere">空间中所有与给定点（球心）距离相等的点的集合。</string>
+    <string name="description_line">在欧几里得几何中，直线是无限延伸的、没有宽度的一维图形。</string>
+    <string name="description_parabola">平面上所有与一个固定点（焦点）和一条固定直线（准线）距离相等的点的集合。</string>
+    <string name="description_helix">一个动点沿直线作匀速直线运动，同时又以等角速度绕同平面的轴线旋转，其轨迹形成一条空间曲线。</string>
+    <string name="description_spiralparabola">一个动点沿抛物线轨迹运动，同时又以等角速度绕同平面的轴线旋转，其轨迹形成一条空间曲线。</string>
+    <string name="description_arc">圆上任意两点之间的部分。</string>
+    <string name="description_fourier">将一个周期函数表示为正弦和余弦函数的无穷级数的方法。</string>
+    <string name="description_function">在数学中，函数是一种关系，它将每个输入值与一个输出值相关联。</string>
+    <string name="description_image">将一张.png格式的图片按像素转化为粒子。</string>
+    
+    <string name="draw_title">绘制</string>
+    <string name="draw_graphics_settings_title">设置</string>
+    <string name="draw_graphics_settings_particle">粒子贴图:</string>
+    <string name="draw_graphics_settings_speedtf">前后移动速度:</string>
+    <string name="draw_graphics_settings_speedtr">左右移动速度:</string>
+    <string name="draw_graphics_settings_speedtu">上下移动速度:</string>
+    <string name="draw_graphics_settings_speedrx">垂直旋转速度:</string>
+    <string name="draw_graphics_settings_speedry">水平旋转速度:</string>
+    <string name="draw_graphics_settings_grid">显示网格</string>
+    <string name="draw_graphics_settings_axis">显示坐标轴</string>
+    <string name="draw_graphics_settings_camera_pos">显示相机坐标</string>
+    <string name="draw_graphics_settings_dynamic_rendering">动态渲染</string>
+    
+    <string name="save_none_text">目前无保存项目，去绘制界面保存吧！</string>
+    <string name="save_modify_title">保存项目修改</string>
+    
+    <string name="about_by">by</string>
+    <string name="about_author">none</string>
+    <string name="tutorial_title">使用教程</string>
+    
+    
+
+</resources>

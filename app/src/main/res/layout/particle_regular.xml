@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <com.lzx.minecraftparticle.ui.main_particle.ParticleColumnView
+            android:id="@+id/circle"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="5dp"
+            app:pcvImg="@drawable/draw_circle"
+            app:pcvType="@string/type_circle"
+            app:pcvDescription="@string/description_circle"/>
+        
+        <com.lzx.minecraftparticle.ui.main_particle.ParticleColumnView
+            android:id="@+id/ellipse"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="5dp"
+            app:pcvImg="@drawable/draw_circle"
+            app:pcvType="@string/type_ellipse"
+            app:pcvDescription="@string/description_ellipse"/>
+        
+        <com.lzx.minecraftparticle.ui.main_particle.ParticleColumnView
+            android:id="@+id/polygon"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="5dp"
+            app:pcvImg="@drawable/draw_circle"
+            app:pcvType="@string/type_polygon"
+            app:pcvDescription="@string/description_polygon"/>
+        
+        <com.lzx.minecraftparticle.ui.main_particle.ParticleColumnView
+            android:id="@+id/star"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="5dp"
+            app:pcvImg="@drawable/draw_circle"
+            app:pcvType="@string/type_star"
+            app:pcvDescription="@string/description_star"/>
+        
+        <com.lzx.minecraftparticle.ui.main_particle.ParticleColumnView
+            android:id="@+id/sphere"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="5dp"
+            app:pcvImg="@drawable/draw_circle"
+            app:pcvType="@string/type_sphere"
+            app:pcvDescription="@string/description_sphere"/>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

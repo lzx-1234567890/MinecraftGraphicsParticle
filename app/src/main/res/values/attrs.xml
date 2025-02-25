@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<resources>
+ 
+    <declare-styleable name="ParticleColumnView">
+        <attr name="pcvImg" format="reference"/>
+        <attr name="pcvType" format="reference|string"/>
+        <attr name="pcvDescription" format="reference|string"/>
+    </declare-styleable>
+    
+    <declare-styleable name="ParamColumnView">
+        <attr name="paramTitle" format="reference|string"/>
+    </declare-styleable>
+    
+    <declare-styleable name="NormalParamView">
+        <attr name="npvHint" format="reference|string"/>
+        <attr name="npvInput" format="reference|string"/>
+        <attr name="npvInputType">
+            <flag name="text" value="1"/>
+            <flag name="number" value="2"/>
+            <flag name="numberDecimal" value="4"/>
+            <flag name="numberSigned" value="8"/>
+        </attr>
+    </declare-styleable>
+    
+     <declare-styleable name="CoordinateParamView">
+        <attr name="cpvHint_x" format="reference|string"/>
+        <attr name="cpvHint_y" format="reference|string"/>
+        <attr name="cpvHint_z" format="reference|string"/>
+        <attr name="cpvInput_x" format="reference|string"/>
+        <attr name="cpvInput_y" format="reference|string"/>
+        <attr name="cpvInput_z" format="reference|string"/>
+    </declare-styleable>
+    
+    <declare-styleable name="ParticleCategoryParamView">
+        <attr name="pcpvHint" format="reference|string"/>
+        <attr name="pcpvInput" format="reference|string"/>
+    </declare-styleable>
+    
+    <declare-styleable name="PathParamView">
+        <attr name="ppvHint" format="reference|string"/>
+        <attr name="ppvInput" format="reference|string"/>
+    </declare-styleable>
+    
+ 
+</resources>

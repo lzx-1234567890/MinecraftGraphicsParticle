@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <com.lzx.minecraftparticle.ui.main_particle.ParticleColumnView
+            android:id="@+id/line"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="5dp"
+            app:pcvImg="@drawable/draw_circle"
+            app:pcvType="@string/type_line"
+            app:pcvDescription="@string/description_line"/>
+        
+        <com.lzx.minecraftparticle.ui.main_particle.ParticleColumnView
+            android:id="@+id/parabola"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="5dp"
+            app:pcvImg="@drawable/draw_circle"
+            app:pcvType="@string/type_parabola"
+            app:pcvDescription="@string/description_parabola"/>
+        
+        <com.lzx.minecraftparticle.ui.main_particle.ParticleColumnView
+            android:id="@+id/helix"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="5dp"
+            app:pcvImg="@drawable/draw_circle"
+            app:pcvType="@string/type_helix"
+            app:pcvDescription="@string/description_helix"/>
+        
+        <com.lzx.minecraftparticle.ui.main_particle.ParticleColumnView
+            android:id="@+id/spiralparabola"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="5dp"
+            app:pcvImg="@drawable/draw_circle"
+            app:pcvType="@string/type_spiralparabola"
+            app:pcvDescription="@string/description_spiralparabola"/>
+        
+        <com.lzx.minecraftparticle.ui.main_particle.ParticleColumnView
+            android:id="@+id/arc"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="5dp"
+            app:pcvImg="@drawable/draw_circle"
+            app:pcvType="@string/type_arc"
+            app:pcvDescription="@string/description_arc"/>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

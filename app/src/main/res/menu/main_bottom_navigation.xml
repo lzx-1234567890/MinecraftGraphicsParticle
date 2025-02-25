@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_particle"
+        android:icon="@drawable/icon_particle"
+        android:title="@string/main_particle" />
+    <item
+        android:id="@+id/action_save"
+        android:icon="@drawable/icon_save"
+        android:title="@string/main_save" />
+    <item
+        android:id="@+id/action_about"
+        android:icon="@drawable/icon_about"
+        android:title="@string/main_about" />
+
+</menu>

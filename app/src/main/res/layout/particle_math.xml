@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <com.lzx.minecraftparticle.ui.main_particle.ParticleColumnView
+            android:id="@+id/function"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="5dp"
+            app:pcvImg="@drawable/draw_circle"
+            app:pcvType="@string/type_function"
+            app:pcvDescription="@string/description_function"/>
+        
+        <com.lzx.minecraftparticle.ui.main_particle.ParticleColumnView
+            android:id="@+id/fourier"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="5dp"
+            app:pcvImg="@drawable/draw_circle"
+            app:pcvType="@string/type_fourier"
+            app:pcvDescription="@string/description_fourier"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
