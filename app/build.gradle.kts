@@ -70,6 +70,7 @@ dependencies {
     implementation("org.apache.tika:tika-core:2.4.1")
     implementation("org.apache.tika:tika-parsers:2.4.1")
     implementation("javax.xml.stream:stax-api:1.0-2")
+    implementation("org.slf4j:slf4j-android:1.7.36")
 
 
 }
