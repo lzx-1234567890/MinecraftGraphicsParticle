@@ -85,3 +85,6 @@ lint/tmp/
 # 签名
 keystore.properties
 app/keystore/
+
+# 发行版本
+app/release/

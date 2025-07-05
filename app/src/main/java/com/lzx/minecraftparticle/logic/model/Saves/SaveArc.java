@@ -90,6 +90,9 @@ public class SaveArc extends Save{
         for(String[] n : reset_nodes) {
             this.nodes.add(n.clone());
         }
+        for(int i = 0;i < this.reset_nodes.size();i++) {
+            this.nodes.add(this.reset_nodes.get(i).clone());
+        }
         this.radius = reset_radius;
         this.angle = reset_angle;
         this.majorArc = reset_majorArc;
