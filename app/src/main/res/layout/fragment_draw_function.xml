@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/card"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/drawParamCategoryTitle"
+                    android:text="@string/draw_param_category_function" />
+
+                <com.lzx.minecraftparticle.ui.view.NormalParamView
+                    android:id="@+id/functionParamView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:npvHint="@string/draw_param_function_exp"
+                    app:npvInputType="text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:orientation="horizontal">
+
+                    <com.lzx.minecraftparticle.ui.view.NormalParamView
+                        android:id="@+id/xStartParamView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:npvHint="@string/draw_param_function_x_start"
+                        app:npvInputType="numberDecimal|numberSigned" />
+
+                    <com.lzx.minecraftparticle.ui.view.NormalParamView
+                        android:id="@+id/xEndParamView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:npvHint="@string/draw_param_function_x_end"
+                        app:npvInputType="numberDecimal|numberSigned" />
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/functionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginVertical="5dp"
+                    android:text="@string/draw_param_function_view"
+                    android:textAppearance="@style/buttonText"
+                    android:textColor="@color/buttonText"
+                    app:backgroundTint="@color/buttonBackground"
+                    app:rippleColor="?attr/colorControlHighlight"
+                    app:cornerRadius="16dp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/card"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/drawParamCategoryTitle"
+                    android:text="@string/draw_param_category_position" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:orientation="horizontal">
+
+                    <com.lzx.minecraftparticle.ui.view.NormalParamView
+                        android:id="@+id/coordinateXParamView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:npvHint="@string/draw_param_originX"
+                        app:npvInputType="numberDecimal|numberSigned" />
+
+                    <com.lzx.minecraftparticle.ui.view.NormalParamView
+                        android:id="@+id/coordinateYParamView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:npvHint="@string/draw_param_originY"
+                        app:npvInputType="numberDecimal|numberSigned" />
+
+                    <com.lzx.minecraftparticle.ui.view.NormalParamView
+                        android:id="@+id/coordinateZParamView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:npvHint="@string/draw_param_originZ"
+                        app:npvInputType="numberDecimal|numberSigned" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/card"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/drawParamCategoryTitle"
+                    android:text="@string/draw_param_category_x_axis" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:orientation="horizontal">
+
+                    <com.lzx.minecraftparticle.ui.view.NormalParamView
+                        android:id="@+id/xAxisXParamView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:npvHint="@string/draw_param_vector_x"
+                        app:npvInputType="numberDecimal|numberSigned" />
+
+                    <com.lzx.minecraftparticle.ui.view.NormalParamView
+                        android:id="@+id/xAxisYParamView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:npvHint="@string/draw_param_vector_y"
+                        app:npvInputType="numberDecimal|numberSigned" />
+
+                    <com.lzx.minecraftparticle.ui.view.NormalParamView
+                        android:id="@+id/xAxisZParamView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:npvHint="@string/draw_param_vector_z"
+                        app:npvInputType="numberDecimal|numberSigned" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/card"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/drawParamCategoryTitle"
+                    android:text="@string/draw_param_category_y_axis" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:orientation="horizontal">
+
+                    <com.lzx.minecraftparticle.ui.view.NormalParamView
+                        android:id="@+id/yAxisXParamView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:npvHint="@string/draw_param_vector_x"
+                        app:npvInputType="numberDecimal|numberSigned" />
+
+                    <com.lzx.minecraftparticle.ui.view.NormalParamView
+                        android:id="@+id/yAxisYParamView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:npvHint="@string/draw_param_vector_y"
+                        app:npvInputType="numberDecimal|numberSigned" />
+
+                    <com.lzx.minecraftparticle.ui.view.NormalParamView
+                        android:id="@+id/yAxisZParamView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:npvHint="@string/draw_param_vector_z"
+                        app:npvInputType="numberDecimal|numberSigned" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/card"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/drawParamCategoryTitle"
+                    android:text="@string/draw_param_category_size" />
+
+                <com.lzx.minecraftparticle.ui.view.NormalParamView
+                    android:id="@+id/scaleXParamView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    app:npvHint="@string/draw_param_function_scale_x"
+                    app:npvInputType="numberDecimal" />
+
+                <com.lzx.minecraftparticle.ui.view.NormalParamView
+                    android:id="@+id/scaleYParamView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    app:npvHint="@string/draw_param_function_scale_y"
+                    app:npvInputType="numberDecimal" />
+
+                <com.lzx.minecraftparticle.ui.view.NormalParamView
+                    android:id="@+id/lengthXParamView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    app:npvHint="@string/draw_param_function_length_x"
+                    app:npvInputType="numberDecimal" />
+
+                <com.lzx.minecraftparticle.ui.view.NormalParamView
+                    android:id="@+id/lengthYParamView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    app:npvHint="@string/draw_param_function_length_y"
+                    app:npvInputType="numberDecimal" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/card"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/drawParamCategoryTitle"
+                    android:text="@string/draw_param_category_precision" />
+
+                <com.lzx.minecraftparticle.ui.view.NormalParamView
+                    android:id="@+id/stepParamView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    app:npvHint="@string/draw_param_function_step"
+                    app:npvInputType="numberDecimal" />
+
+                <com.lzx.minecraftparticle.ui.view.NormalParamView
+                    android:id="@+id/stepXParamView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    app:npvHint="@string/draw_param_function_step_x"
+                    app:npvInputType="numberDecimal" />
+
+                <com.lzx.minecraftparticle.ui.view.NormalParamView
+                    android:id="@+id/stepYParamView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    app:npvHint="@string/draw_param_function_step_y"
+                    app:npvInputType="numberDecimal" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/card"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/drawParamCategoryTitle"
+                    android:text="@string/draw_param_category_draw" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/xAxisPSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:text="@string/draw_param_function_draw_x_axis_p"
+                    android:checked="true" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/xAxisNSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:text="@string/draw_param_function_draw_x_axis_n"
+                    android:checked="true" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/yAxisPSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:text="@string/draw_param_function_draw_y_axis_p"
+                    android:checked="true" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/yAxisNSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:text="@string/draw_param_function_draw_y_axis_n"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/card"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/drawParamCategoryTitle"
+                    android:text="@string/draw_param_category_particle" />
+
+                <com.lzx.minecraftparticle.ui.view.ParticleCategoryParamView
+                    android:id="@+id/particleFunctionParamView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    app:pcpvHint="@string/draw_param_function_particle" />
+
+                <com.lzx.minecraftparticle.ui.view.ParticleCategoryParamView
+                    android:id="@+id/particleXParamView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    app:pcpvHint="@string/draw_param_function_particle_x" />
+
+                <com.lzx.minecraftparticle.ui.view.ParticleCategoryParamView
+                    android:id="@+id/particleYParamView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    app:pcpvHint="@string/draw_param_function_particle_y" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/card"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/drawParamCategoryTitle"
+                    android:text="@string/draw_param_category_file" />
+
+                <com.lzx.minecraftparticle.ui.view.PathParamView
+                    android:id="@+id/filePathParamView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    app:ppvHint="@string/draw_param_filePath" />
+
+                <com.lzx.minecraftparticle.ui.view.NormalParamView
+                    android:id="@+id/fileNameParamView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    app:npvHint="@string/draw_param_fileName"
+                    app:npvInputType="text" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/createButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            android:text="@string/draw_param_create"
+            android:textAppearance="@style/buttonText"
+            android:textColor="@color/buttonText"
+            app:backgroundTint="@color/buttonBackground"
+            app:rippleColor="?attr/colorControlHighlight"
+            app:cornerRadius="16dp"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

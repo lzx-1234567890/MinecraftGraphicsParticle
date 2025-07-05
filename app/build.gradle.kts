@@ -8,15 +8,15 @@ plugins {
 
 android {
     namespace = "com.lzx.minecraftparticle"
-    compileSdk = 33
+    compileSdk = 36
     
     
     defaultConfig {
         applicationId = "com.lzx.minecraftparticle"
-        minSdk = 21
+        minSdk = 26
         targetSdk = 33
-        versionCode = 7
-        versionName = "1.4.0"
+        versionCode = 8
+        versionName = "1.5.0"
         
         vectorDrawables { 
             useSupportLibrary = true
@@ -61,12 +61,15 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    //implementation("com.github.barteksc:android-pdf-viewer:3.2.0-beta.1")
-    //implementation("com.github.mhiew:android-pdf-viewer:3.2.0-beta.1")
-    //implementation("io.github.afreakyelf:Pdf-Viewer:latest-version")
     implementation("com.dmitryborodin:pdfview-android:1.1.0")
     implementation("com.github.addisonelliott:SegmentedButton:3.1.9")
-    //implementation("com.miguelcatalan:materialsearchview:1.4.0")
-    //implementation ("com.github.MiguelCatalan:MaterialSearchView:v1.2.0")
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel:2.9.1")
+    implementation("com.caverock:androidsvg:1.4")
+    implementation("net.objecthunter:exp4j:0.4.8")
+    implementation("org.apache.tika:tika-core:2.4.1")
+    implementation("org.apache.tika:tika-parsers:2.4.1")
+    implementation("javax.xml.stream:stax-api:1.0-2")
+
 
 }

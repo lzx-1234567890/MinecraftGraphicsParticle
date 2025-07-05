@@ -28,7 +28,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="10dp"
-            app:text="信息"
+            app:text="@string/dialog_save_item_information"
             app:selectedTextColor="@color/segmentedButtonSelectedTextColor"/>
         
         <com.addisonelliott.segmentedbutton.SegmentedButton
@@ -36,7 +36,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="10dp"
-            app:text="管理"
+            app:text="@string/dialog_save_item_management"
             app:selectedTextColor="@color/segmentedButtonSelectedTextColor"/>
         
 </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>

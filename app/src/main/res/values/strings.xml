@@ -1,48 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Minecraft图形粒子</string>
-    
-    <string name="main_particle">绘制</string>
-    <string name="main_save">保存</string>
-    <string name="main_about">关于</string>
-    
+
+
+    <!--Toolbar标题-->
+
+    <string name="toolbar_title_particle">绘制</string>
+    <string name="toolbar_title_save">保存</string>
+    <string name="toolbar_title_about">关于</string>
+    <string name="toolbar_title_tutorial">使用教程</string>
+
+    <string name="toolbar_title_draw">绘制</string>
+
+    <!--图标-->
+
+    <string name="action_particle">绘制</string>
     <string name="action_save">保存</string>
+    <string name="action_about">关于</string>
     <string name="action_reset">重置</string>
-    <string name="action_remove">移除</string>
-    <string name="action_sort">排序</string>
-    <string name="action_close">关闭</string>
-    
-    <string name="dialog_update_content_title">更新内容</string>
-    <string name="dialog_update_content_message">
-        -----2025-2-23(1.4.0) \n1.新增图形 \n2.修复一些问题
-        \n\n-----2025-2-05(1.3.2) \n1.绘制和修改界面增加副标题 \n2.保存时可调节图片的大小
-        \n\n-----2025-2-05(1.3.1) \n1.解决粒子搜索栏的可滑动问题 \n2.修复全部因屏幕旋转引发的Bug \n3.保存项目的修改目前可使用了
-        \n\n-----2025-1-18(1.3.0) \n修复部分因屏幕旋转引发的Bug
-        \n\n-----2025-1-13(1.2-fix) \n修复安卓13及以下兼容问题
-        \n\n-----2025-1-12(1.2) \n1.修复保存问题 \n2.粒子搜索更全面且排序
-        \n\n-----2025-1-11(1.1) \n1.UI界面使用Material Design \n2.粒子种类支持搜索 \n3.新增"更新内容"
-        \n\n-----2024-12-22(1.0) \n初始版本
-    </string>
-    
-    <string name="dialog_draw_save_message"></string>
-    <string name="dialog_draw_save_name_hint">输入保存项目名称</string>
-    <string name="dialog_draw_save_name_error">名称不能为空</string>
-    <string name="dialog_draw_save_width_hint">输入保存后图片宽度</string>
-    <string name="dialog_draw_save_width_error">宽度输入有误</string>
-    <string name="dialog_draw_save_height_hint">输入保存后图片高度</string>
-    <string name="dialog_draw_save_height_error">高度输入有误</string>
-    <string name="dialog_draw_save_param_error">参数输入错误</string>
-    <string name="dialog_draw_save_ps">注:图片大小严重影响保存页面的加载速度</string>
-    <string name="dialog_draw_reset_message">是否确定重置，所有参数的值都将恢复默认值。</string>
-    <string name="dialog_param_particle_category_title">粒子种类</string>
-    <string name="dialog_param_particle_category_searchview_hint">搜索</string>
-    <string name="dialog_param_particle_category_searchbar_hint">搜索粒子种类</string>
-    <string name="dialog_param_particle_category_text">点击上方搜索栏进行搜索</string>
-    
-    <string name="dialog_graphics_help_title">操作帮助</string>
-    <string name="dialog_graphics_help_message">前后移动:双指放缩\n左右移动:双指平行左右移动\n上下移动:双指同一条竖直线上上下移动\n垂直旋转:单指上下移动\n水平旋转:单指左右移动\n图形坐标刷新:点击图形Tab项</string>
-    
-    <string name="dialog_save_item_remove_message">是否移除此保存项目，这将不可恢复。</string>
+
+    <!--绘制-->
     
     <string name="draw_category_regular">规则图形</string>
     <string name="draw_category_line">曲直线</string>
@@ -75,9 +52,291 @@
     <string name="description_arc">圆上任意两点之间的部分。</string>
     <string name="description_fourier">将一个周期函数表示为正弦和余弦函数的无穷级数的方法。</string>
     <string name="description_function">在数学中，函数是一种关系，它将每个输入值与一个输出值相关联。</string>
-    <string name="description_image">将一张.png格式的图片按像素转化为粒子。</string>
-    
-    <string name="draw_title">绘制</string>
+    <string name="description_image">将一张图片按像素转化为粒子。</string>
+
+    <!--保存-->
+
+    <string name="save_none_text">目前无保存项目，去绘制界面保存吧！</string>
+
+    <!--关于-->
+
+    <string name="about_by">by</string>
+    <string name="about_author">none</string>
+    <string name="about_list_tutorial">使用教程</string>
+    <string name="about_list_author">作者信息</string>
+    <string name="about_list_update">更新内容</string>
+    <string name="about_list_donate">捐赠作者</string>
+    <string name="about_list_check">检查更新</string>
+
+    <!--对话框-->
+
+    <string name="dialog_title_reset">重置</string>
+    <string name="dialog_title_save">保存</string>
+    <string name="dialog_title_remove">移除</string>
+    <string name="dialog_title_graphics_help">操作帮助</string>
+    <string name="dialog_title_particle_category">粒子种类</string>
+    <string name="dialog_title_function_list">可用函数列表</string>
+    <string name="dialog_title_color">颜色</string>
+    <string name="dialog_title_donate">捐赠</string>
+    <string name="dialog_message_reset">是否确定重置，所有参数的值都将恢复默认值。</string>
+    <string name="dialog_message_remove">是否移除此保存项目，这将不可恢复。</string>
+    <string name="dialog_message_graphics_help">前后移动:双指放缩\n左右移动:双指平行左右移动\n上下移动:双指同一条竖直线上上下移动\n垂直旋转:单指上下移动\n水平旋转:单指左右移动\n图形坐标刷新:点击图形Tab项</string>
+    <string name="dialog_draw_save_name_hint">输入保存项目名称</string>
+    <string name="dialog_draw_save_name_error">名称不能为空</string>
+    <string name="dialog_draw_save_width_hint">输入保存后图片宽度</string>
+    <string name="dialog_draw_save_width_error">宽度输入有误</string>
+    <string name="dialog_draw_save_height_hint">输入保存后图片高度</string>
+    <string name="dialog_draw_save_height_error">高度输入有误</string>
+    <string name="dialog_draw_save_param_error">参数输入错误</string>
+    <string name="dialog_draw_save_ps">注:图片大小严重影响保存页面的加载速度</string>
+    <string name="dialog_save_item_information">信息</string>
+    <string name="dialog_save_item_management">管理</string>
+    <string name="dialog_param_particle_category_title">粒子种类</string>
+    <string name="dialog_param_particle_category_searchview_hint">搜索</string>
+    <string name="dialog_param_particle_category_searchbar_hint">搜索粒子种类</string>
+    <string name="dialog_param_particle_category_text">点击上方搜索栏进行搜索</string>
+    <string name="dialog_colorpicker_alpha">透明度</string>
+    <string name="dialog_title_update_content">更新内容</string>
+    <string name="dialog_message_update_content">
+        -----2025-7-05(1.5.0) \n1.新增椭圆,多边形,星形,球体,直线,抛物线,螺旋线,螺旋抛物线,圆弧,函数,傅里叶级数,图片 \n2.内置粒子种类已适配Minecraft基岩版v1.21.100.23Beta_v8a
+        \n\n-----2025-2-23(1.4.0) \n1.新增图形 \n2.修复一些问题
+        \n\n-----2025-2-05(1.3.2) \n1.绘制和修改界面增加副标题 \n2.保存时可调节图片的大小
+        \n\n-----2025-2-05(1.3.1) \n1.解决粒子搜索栏的可滑动问题 \n2.修复全部因屏幕旋转引发的Bug \n3.保存项目的修改目前可使用了
+        \n\n-----2025-1-18(1.3.0) \n修复部分因屏幕旋转引发的Bug
+        \n\n-----2025-1-13(1.2-fix) \n修复安卓13及以下兼容问题
+        \n\n-----2025-1-12(1.2) \n1.修复保存问题 \n2.粒子搜索更全面且排序
+        \n\n-----2025-1-11(1.1) \n1.UI界面使用Material Design \n2.粒子种类支持搜索 \n3.新增"更新内容"
+        \n\n-----2024-12-22(1.0) \n初始版本
+    </string>
+
+    <!--绘制界面-->
+
+    <string name="draw_tab_param">参数</string>
+    <string name="draw_tab_graphics">图形</string>
+    <string name="draw_param_category_position">位置</string>
+    <string name="draw_param_category_size">大小</string>
+    <string name="draw_param_category_shape">形状</string>
+    <string name="draw_param_category_precision">精度</string>
+    <string name="draw_param_category_particle">粒子</string>
+    <string name="draw_param_category_file">文件</string>
+    <string name="draw_param_category_gravity">重力的方向向量</string>
+    <string name="draw_param_category_node">节点</string>
+    <string name="draw_param_category_function">函数</string>
+    <string name="draw_param_category_x_axis">X轴的正向方向向量</string>
+    <string name="draw_param_category_y_axis">Y轴的正向方向向量</string>
+    <string name="draw_param_category_draw">绘制</string>
+    <string name="draw_param_category_svg">SVG</string>
+    <string name="draw_param_category_time">时间</string>
+    <string name="draw_param_category_image">图片</string>
+    <string name="draw_param_category_color">颜色</string>
+    <string name="draw_param_category_width_vector">宽的方向向量</string>
+    <string name="draw_param_category_height_vector">高的方向向量</string>
+
+    <string name="draw_param_circle_coordinateX">圆心X坐标</string>
+    <string name="draw_param_circle_coordinateY">圆心Y坐标</string>
+    <string name="draw_param_circle_coordinateZ">圆心Z坐标</string>
+    <string name="draw_param_ellipse_radiusa">输入半长轴(格)</string>
+    <string name="draw_param_ellipse_radiusb">输入半短轴(格)</string>
+    <string name="draw_param_star_base">输入基星形的角数(4或奇数)</string>
+    <string name="draw_param_star_target">输入目标星形的角数(需为基星形角数的倍数)</string>
+    <string name="draw_param_sphere_coordinateX">球心X坐标</string>
+    <string name="draw_param_sphere_coordinateY">球心Y坐标</string>
+    <string name="draw_param_sphere_coordinateZ">球心Z坐标</string>
+    <string name="draw_param_sphere_latitude">输入纬度间隔角(度)</string>
+    <string name="draw_param_sphere_longitude">输入经度间隔角(度)</string>
+    <string name="draw_param_regular_coordinateX">中心X坐标</string>
+    <string name="draw_param_regular_coordinateY">中心Y坐标</string>
+    <string name="draw_param_regular_coordinateZ">中心Z坐标</string>
+    <string name="draw_param_regular_hAngle">输入水平角(度，-180~180)</string>
+    <string name="draw_param_regular_vAngle">输入竖直角(度，-90~90)</string>
+    <string name="draw_param_regular_offset">输入偏移角(度)</string>
+    <string name="draw_param_regular_radius">输入半径(格)</string>
+    <string name="draw_param_regular_side_length">输入边长(格)</string>
+    <string name="draw_param_regular_side_number">输入边数</string>
+    <string name="draw_param_regular_step">输入步长(度)</string>
+
+    <string name="draw_param_helix_radius">输入螺旋半径(格)</string>
+    <string name="draw_param_helix_distance">输入螺旋距离(格, 正负决定顺逆时针旋转)</string>
+    <string name="draw_param_sprialparabola_angle_velocity">输入螺旋角速度(rad/格)</string>
+    <string name="draw_param_arc_add">增加节点</string>
+    <string name="draw_param_arc_radius">输入初始半径</string>
+    <string name="draw_param_arc_major">初始圆弧为 优弧</string>
+    <string name="draw_param_arc_minor">初始圆弧为 劣弧</string>
+    <string name="draw_param_arc_step">统一步长</string>
+    <string name="draw_param_line_cxs">起点X坐标</string>
+    <string name="draw_param_line_cys">起点Y坐标</string>
+    <string name="draw_param_line_czs">起点Z坐标</string>
+    <string name="draw_param_line_cxe">终点X坐标</string>
+    <string name="draw_param_line_cye">终点Y坐标</string>
+    <string name="draw_param_line_cze">终点Z坐标</string>
+    <string name="draw_param_line_angle_direction">输入初始方向角(度, -90~90)</string>
+    <string name="draw_param_line_angle_rotation">输入初始旋转角(度, 0~360)</string>
+    <string name="draw_param_line_step">输入步长(格)</string>
+
+    <string name="draw_param_function_exp">函数表达式(y=... x为自变量)</string>
+    <string name="draw_param_function_x_start">X的起点值</string>
+    <string name="draw_param_function_x_end">X的终点值</string>
+    <string name="draw_param_function_scale_x">输入X轴缩放</string>
+    <string name="draw_param_function_scale_y">输入Y轴缩放</string>
+    <string name="draw_param_function_length_x">输入X轴正或负轴长度(格)</string>
+    <string name="draw_param_function_length_y">输入Y轴正或负轴长度(格)</string>
+    <string name="draw_param_function_step">输入函数步长(格)</string>
+    <string name="draw_param_function_step_x">输入X轴步长(格)</string>
+    <string name="draw_param_function_step_y">输入Y轴步长(格)</string>
+    <string name="draw_param_function_draw_x_axis_p">绘制X正轴</string>
+    <string name="draw_param_function_draw_x_axis_n">绘制X负轴</string>
+    <string name="draw_param_function_draw_y_axis_p">绘制Y正轴</string>
+    <string name="draw_param_function_draw_y_axis_n">绘制Y负轴</string>
+    <string name="draw_param_function_particle">函数粒子种类</string>
+    <string name="draw_param_function_particle_x">X轴粒子种类</string>
+    <string name="draw_param_function_particle_y">Y轴粒子种类</string>
+    <string name="draw_param_function_view">查看可用函数</string>
+    <string name="draw_param_function_list">
+        -----运算符\n
+        + 加法 - 减法\n
+        * 乘法 / 除法\n
+        ^或** 幂运算 % 取余\n\n
+        -----三角函数\n
+        sin(x) 正弦 cos(x) 余弦 tan(x) 正切\n
+        asin(x) 反正弦 acos(x) 反余弦 atan(x) 反正切\n
+        sinh(x) 双曲正弦 cosh(x) 双曲余弦 tanh(x) 双曲正切\n\n
+        -----对数和指数函数\n
+        log(x) 自然对数(等同于ln) log10(x) 以10为底的对数(等同于lg)\n
+        exp(x) e的x次方(等同于e^x)\n\n
+        -----其他函数\n
+        abs(x) 绝对值\n
+        sqrt(x) 平方根 cbrt(x) 立方根\n
+        ceil(x) 向上取整 floor(x) 向下取整\n
+        round(x) 四舍五入 signum(x) 符号函数\n
+        random() 生成[0,1)的随机数\n
+        min(x, y) 最小值 max(x, y) 最大值\n\n
+        -----常量\n
+        pi π(3.14159...)\n
+        e 自然对数底(2.71828...)
+    </string>
+
+    <string name="draw_param_fourier_path">路径%d</string>
+    <string name="draw_param_fourier_angle_rotation">输入旋转角(度, 0~360)</string>
+    <string name="draw_param_fourier_xp">宽沿正X轴</string>
+    <string name="draw_param_fourier_xn">宽沿负X轴</string>
+    <string name="draw_param_fourier_zp">高沿正Z轴</string>
+    <string name="draw_param_fourier_zn">高沿负Z轴</string>
+    <string name="draw_param_fourier_cycle">输入周期(tick)</string>
+    <string name="draw_param_fourier_scale">输入缩放</string>
+    <string name="draw_param_fourier_armor_stand_number">盔甲架数量(偶数)</string>
+    <string name="draw_param_fourier_point_number">拟合点数量</string>
+    <string name="draw_param_fourier_armor_stand_name">输入盔甲架名称</string>
+
+    <string name="draw_param_image_tip">若在图形预览时发生崩溃，请在下方进行适当缩放后再进入图形预览。\n目前仅支持png, jpeg, webp, svg格式图片</string>
+    <string name="draw_param_image_choose_color">确定需绘制部分的颜色</string>
+    <string name="draw_param_image_tolerance">容忍值(负数表示选择所有颜色)</string>
+    <string name="draw_param_image_angle_rotation">输入旋转角(度, 0~360)</string>
+    <string name="draw_param_image_scale">输入缩放</string>
+    <string name="draw_param_image_step_width">输入宽步长</string>
+    <string name="draw_param_image_step_height">输入高步长</string>
+
+    <string name="draw_param_originX">原点X坐标</string>
+    <string name="draw_param_originY">原点Y坐标</string>
+    <string name="draw_param_originZ">原点Z坐标</string>
+    <string name="draw_param_vector_x">X分量</string>
+    <string name="draw_param_vector_y">Y分量</string>
+    <string name="draw_param_vector_z">Z分量</string>
+    <string name="draw_param_particle">输入粒子种类</string>
+    <string name="draw_param_filePath">输入.mcfunction文件保存路径</string>
+    <string name="draw_param_fileName">输入.mcfunction文件保存名称</string>
+    <string name="draw_param_create">创建粒子函数文件</string>
+    <string name="draw_param_modify">修改保存项目</string>
+
+    <!--保存项目信息-->
+
+    <string name="save_information_basic_id">ID</string>
+    <string name="save_information_basic_type">类型</string>
+    <string name="save_information_basic_name">名称</string>
+    <string name="save_information_basic_createDate">创建日期</string>
+    <string name="save_information_basic_modifyDate">修改日期</string>
+
+    <string name="save_information_circle_coordinate">圆心坐标</string>
+    <string name="save_information_ellipse_radiusa">半长轴(格)</string>
+    <string name="save_information_ellipse_radiusb">半短轴(格)</string>
+    <string name="save_information_star_base">基星形的角数</string>
+    <string name="save_information_star_target">目标星形的角数</string>
+    <string name="save_information_sphere_coordinate">球心坐标</string>
+    <string name="save_information_sphere_latitude">"纬度间隔角(度)"</string>
+    <string name="save_information_sphere_longitude">"经度间隔角(度)"</string>
+    <string name="save_information_regular_coordinate">中心坐标</string>
+    <string name="save_information_regular_hAngle">水平角(度)</string>
+    <string name="save_information_regular_vAngle">竖直角(度)</string>
+    <string name="save_information_regular_offset">偏移角(度)</string>
+    <string name="save_information_regular_radius">半径(格)</string>
+    <string name="save_information_regular_side_length">边长(格)</string>
+    <string name="save_information_regular_side_number">边数</string>
+    <string name="save_information_regular_step">步长(度)</string>
+
+    <string name="save_information_helix_radius">"螺旋半径(格)"</string>
+    <string name="save_information_helix_distance">"螺旋距离(格)"</string>
+    <string name="save_information_sprialparabola_angle_velocity">螺旋角速度(rad/格)</string>
+    <string name="save_information_arc_node">节点%d坐标</string>
+    <string name="save_information_arc_radius">初始半径(格)</string>
+    <string name="save_information_arc_type">初始圆弧</string>
+    <string name="save_information_arc_major">优弧</string>
+    <string name="save_information_arc_minor">劣弧</string>
+    <string name="save_information_arc_step">统一步长</string>
+    <string name="save_information_line_start">起点</string>
+    <string name="save_information_line_end">终点</string>
+    <string name="save_information_line_vector_g">重力的方向向量</string>
+    <string name="save_information_line_angle_direction">初始方向角(度)</string>
+    <string name="save_information_line_angle_rotation">初始旋转角(度)</string>
+    <string name="save_information_line_step">步长(格)</string>
+
+    <string name="save_information_function_exp">函数表达式</string>
+    <string name="save_information_function_definition">定义域</string>
+    <string name="save_information_function_vector_x">X轴正向方向向量</string>
+    <string name="save_information_function_vector_y">Y轴正向方向向量</string>
+    <string name="save_information_function_scale_x">X轴缩放</string>
+    <string name="save_information_function_scale_y">Y轴缩放</string>
+    <string name="save_information_function_length_x">X轴正轴或负轴长度</string>
+    <string name="save_information_function_length_y">Y轴正轴或负轴长度</string>
+    <string name="save_information_function_step">函数步长</string>
+    <string name="save_information_function_step_x">X轴步长(格)</string>
+    <string name="save_information_function_step_y">Y轴步长(格)</string>
+    <string name="save_information_function_draw_x_axis_p">绘制X正轴</string>
+    <string name="save_information_function_draw_x_axis_n">绘制X负轴</string>
+    <string name="save_information_function_draw_y_axis_p">绘制Y正轴</string>
+    <string name="save_information_function_draw_y_axis_n">绘制Y负轴</string>
+    <string name="save_information_function_particle">函数粒子种类</string>
+    <string name="save_information_function_particle_x">X轴粒子种类</string>
+    <string name="save_information_function_particle_y">Y轴粒子种类</string>
+
+    <string name="save_information_fourier_uri">SVG URI</string>
+    <string name="save_information_fourier_path">路径序号</string>
+    <string name="save_information_fourier_angle_rotation">旋转角(度)</string>
+    <string name="save_information_fourier_x_axis_p">宽沿X正轴</string>
+    <string name="save_information_fourier_x_axis_n">宽沿X负轴</string>
+    <string name="save_information_fourier_z_axis_p">高沿Z正轴</string>
+    <string name="save_information_fourier_z_axis_n">高沿Z负轴</string>
+    <string name="save_information_fourier_cycle">周期(tick)</string>
+    <string name="save_information_fourier_scale">缩放</string>
+    <string name="save_information_fourier_armor_stand_number">盔甲架数量</string>
+    <string name="save_information_fourier_point_number">拟合点数量</string>
+    <string name="save_information_fourier_armor_stand_name">盔甲架名称</string>
+
+    <string name="save_information_image_uri">图片URI</string>
+    <string name="save_information_image_color">绘制部分的颜色</string>
+    <string name="save_information_image_tolerance">容忍值</string>
+    <string name="save_information_image_angle_rotation">旋转角(度)</string>
+    <string name="save_information_image_vector_width">宽的方向向量</string>
+    <string name="save_information_image_vector_height">高的方向向量</string>
+    <string name="save_information_image_scale">缩放</string>
+    <string name="save_information_image_step_width">宽步长</string>
+    <string name="save_information_image_step_height">高步长</string>
+
+    <string name="save_information_origin">原点</string>
+    <string name="save_information_particle">粒子种类</string>
+    <string name="save_information_filePath">保存路径</string>
+    <string name="save_information_fileName">保存名称</string>
+
+    <!--图形预览-->
+
     <string name="draw_graphics_settings_title">设置</string>
     <string name="draw_graphics_settings_particle">粒子贴图:</string>
     <string name="draw_graphics_settings_speedtf">前后移动速度:</string>
@@ -89,14 +348,108 @@
     <string name="draw_graphics_settings_axis">显示坐标轴</string>
     <string name="draw_graphics_settings_camera_pos">显示相机坐标</string>
     <string name="draw_graphics_settings_dynamic_rendering">动态渲染</string>
-    
-    <string name="save_none_text">目前无保存项目，去绘制界面保存吧！</string>
-    <string name="save_modify_title">保存项目修改</string>
-    
-    <string name="about_by">by</string>
-    <string name="about_author">none</string>
-    <string name="tutorial_title">使用教程</string>
-    
-    
+    <string name="draw_graphics_camera_position">相机坐标</string>
+
+    <!--错误与警告-->
+
+    <string name="draw_param_ellipse_radiusa_error">半长轴输入有误</string>
+    <string name="draw_param_ellipse_radiusb_error">半短轴输入有误</string>
+    <string name="draw_param_ellipse_radiusab1_error">半长轴不应小于半短轴</string>
+    <string name="draw_param_ellipse_radiusab2_error">半短轴不应大于半长轴</string>
+    <string name="draw_param_star_base_error">基星形的角数输入有误</string>
+    <string name="draw_param_star_target_error">目标星形的角数输入有误</string>
+    <string name="draw_param_sphere_latitude_error">纬度间隔角输入有误</string>
+    <string name="draw_param_sphere_longitude_error">经度间隔角输入有误</string>
+    <string name="draw_param_regular_hAngle_error">水平角输入有误</string>
+    <string name="draw_param_regular_vAngle_error">竖直角输入有误</string>
+    <string name="draw_param_regular_offset_error">偏移角输入有误</string>
+    <string name="draw_param_regular_radius_error">半径输入有误</string>
+    <string name="draw_param_regular_side_length_error">边长输入有误</string>
+    <string name="draw_param_regular_side_number_error">边数输入有误</string>
+
+    <string name="draw_param_helix_radius_error">螺旋半径输入有误</string>
+    <string name="draw_param_helix_distance_error">螺旋距离输入有误</string>
+    <string name="draw_param_sprialparabola_angle_velocity_error">螺旋角速度输入有误</string>
+    <string name="draw_param_arc_radius_error">初始半径输入有误</string>
+    <string name="draw_param_line_angle_direction_error">初始方向角输入有误</string>
+    <string name="draw_param_line_angle_rotation_error">初始旋转角输入有误</string>
+
+    <string name="draw_param_function_exp_error">函数表达式不能为空</string>
+    <string name="draw_param_function_x_start_error">X的起点值不能为空</string>
+    <string name="draw_param_function_x_end_error">X的终点值不能为空</string>
+    <string name="save_information_function_length_error">长度输入有误</string>
+
+    <string name="draw_param_fourier_uri_error">请选择正确的SVG文件</string>
+    <string name="draw_param_fourier_cycle_error">周期输入有误</string>
+    <string name="draw_param_fourier_armor_stand_number_error">盔甲架数量输入有误</string>
+    <string name="draw_param_fourier_point_number_error">拟合点数量输入有误</string>
+    <string name="draw_param_fourier_armor_stand_name_error">盔甲架名称不能为空</string>
+
+    <string name="draw_param_image_uri_error">请选择正确的图片文件</string>
+    <string name="draw_param_image_tolerance_error">容忍值输入有误</string>
+
+    <string name="draw_param_coordinateX_error">X坐标不能为空</string>
+    <string name="draw_param_coordinateY_error">Y坐标不能为空</string>
+    <string name="draw_param_coordinateZ_error">Z坐标不能为空</string>
+    <string name="draw_param_vectorX_error">X分量不能为空</string>
+    <string name="draw_param_vectorY_error">Y分量不能为空</string>
+    <string name="draw_param_vectorZ_error">Z分量不能为空</string>
+    <string name="draw_param_angle_rotation_error">旋转角输入有误</string>
+    <string name="draw_param_scale_error">缩放输入有误</string>
+    <string name="draw_param_step_error">步长输入有误</string>
+    <string name="draw_param_particle_error">粒子种类不能为空</string>
+    <string name="draw_param_filePath_error">文件路径不能为空</string>
+    <string name="draw_param_fileName_error">文件名称不能为空</string>
+    <string name="draw_param_error">参数输入有误</string>
+
+    <string name="draw_function_calculate_error">函数表达式错误或函数定义域错误</string>
+    <string name="draw_fourier_no_path_error">该SVG文件无可用path，请选择有效的SVG</string>
+    <string name="draw_fourier_parse_error">解析SVG文件时发生错误</string>
+    <string name="draw_image_type_error">该图片类型暂不支持</string>
+    <string name="draw_image_parse_error">解析图片时发生错误</string>
+    <string name="draw_persistable_uri_error">该图片Uri无法进行持久化，不能用于保存</string>
+
+    <string name="graphics_render_error">目前不支持图形预览</string>
+    <string name="param_to_graphics_error">参数输入有误,图形更新失败</string>
+    <string name="permission_storage_error">请先获取所有文件访问权限</string>
+    <string name="out_of_memory_error">内存溢出</string>
+
+    <!--输出注释-->
+
+    <string name="mcfunction_fourier_summon">#生成盔甲架\n</string>
+    <string name="mcfunction_fourier_init">#初始化盔甲架\n</string>
+    <string name="mcfunction_fourier_motion">#盔甲架的运动\n</string>
+    <string name="mcfunction_fourier_particle">#粒子绘制\n</string>
+
+    <!--提示辅助信息-->
+
+    <string name="create_successfully">创建成功</string>
+    <string name="reset_successfully">重置成功</string>
+    <string name="save_successfully">保存成功</string>
+    <string name="modify_successfully">修改成功</string>
+    <string name="remove_successfully">移除成功</string>
+    <string name="has_selected">已选择</string>
+    <string name="current_version">当前版本:</string>
+    <string name="nolonger">不再显示</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="create">创建</string>
+    <string name="close">关闭</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="save">保存</string>
+    <string name="remove">移除</string>
+    <string name="modify">修改</string>
+
+    <string name="pdf_load">请等待PDF文件的加载</string>
+    <string name="no_qq">请先安装QQ应用</string>
+    <string name="latest">目前已经是最新版本</string>
+
+    <!--粒子-->
+
+    <string name="biome_tinted_leaves_particle">树叶飘动粒子</string>
+    <string name="firefly_particle">萤火虫粒子</string>
+    <string name="magic_critical_hit_emitter">魔法暴击粒子</string>
+
 
 </resources>

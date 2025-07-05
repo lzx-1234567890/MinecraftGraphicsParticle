@@ -7,11 +7,7 @@
         <attr name="pcvType" format="reference|string"/>
         <attr name="pcvDescription" format="reference|string"/>
     </declare-styleable>
-    
-    <declare-styleable name="ParamColumnView">
-        <attr name="paramTitle" format="reference|string"/>
-    </declare-styleable>
-    
+
     <declare-styleable name="NormalParamView">
         <attr name="npvHint" format="reference|string"/>
         <attr name="npvInput" format="reference|string"/>

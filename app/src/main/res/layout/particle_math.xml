@@ -10,21 +10,21 @@
         android:layout_width="match_parent"
         android:orientation="vertical">
 
-        <com.lzx.minecraftparticle.ui.main_particle.ParticleColumnView
+        <com.lzx.minecraftparticle.ui.view.ParticleColumnView
             android:id="@+id/function"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_marginVertical="5dp"
-            app:pcvImg="@drawable/draw_circle"
+            app:pcvImg="@drawable/draw_function"
             app:pcvType="@string/type_function"
             app:pcvDescription="@string/description_function"/>
         
-        <com.lzx.minecraftparticle.ui.main_particle.ParticleColumnView
+        <com.lzx.minecraftparticle.ui.view.ParticleColumnView
             android:id="@+id/fourier"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_marginVertical="5dp"
-            app:pcvImg="@drawable/draw_circle"
+            app:pcvImg="@drawable/draw_fourier"
             app:pcvType="@string/type_fourier"
             app:pcvDescription="@string/description_fourier"/>
 

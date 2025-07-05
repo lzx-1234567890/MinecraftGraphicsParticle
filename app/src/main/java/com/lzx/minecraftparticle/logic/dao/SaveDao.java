@@ -1,25 +1,36 @@
 package com.lzx.minecraftparticle.logic.dao;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
 import android.icu.text.SimpleDateFormat;
 import android.net.Uri;
 import android.util.Log;
-import android.widget.Toast;
+
+import com.google.gson.Gson;
 import com.lzx.minecraftparticle.MinecraftParticleApplication;
 import com.lzx.minecraftparticle.logic.model.Save;
-import java.io.BufferedInputStream;
+import com.lzx.minecraftparticle.logic.model.Saves.SaveArc;
+import com.lzx.minecraftparticle.logic.model.Saves.SaveCircle;
+import com.lzx.minecraftparticle.logic.model.Saves.SaveEllipse;
+import com.lzx.minecraftparticle.logic.model.Saves.SaveFourier;
+import com.lzx.minecraftparticle.logic.model.Saves.SaveFunction;
+import com.lzx.minecraftparticle.logic.model.Saves.SaveHelix;
+import com.lzx.minecraftparticle.logic.model.Saves.SaveImage;
+import com.lzx.minecraftparticle.logic.model.Saves.SaveLine;
+import com.lzx.minecraftparticle.logic.model.Saves.SaveParabola;
+import com.lzx.minecraftparticle.logic.model.Saves.SavePolygon;
+import com.lzx.minecraftparticle.logic.model.Saves.SaveSphere;
+import com.lzx.minecraftparticle.logic.model.Saves.SaveSprialParabola;
+import com.lzx.minecraftparticle.logic.model.Saves.SaveStar;
+
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.util.Date;
 import java.util.Locale;
 
@@ -45,8 +56,8 @@ public class SaveDao {
         //获取id
         SharedPreferences sp = context.getSharedPreferences("Save", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
-        int id = sp.getInt("save_num", -1);
-        editor.putInt("save_num", id + 1);
+        int id = sp.getInt("saveNum", -1);
+        editor.putInt("saveNum", id + 1);
         editor.apply();
         
         //图片本地化保存
@@ -68,8 +79,8 @@ public class SaveDao {
             }
             options.inJustDecodeBounds = false;
             bitmap = BitmapFactory.decodeStream(context.getContentResolver().openInputStream(Uri.parse(save.getImageUri())), null, options);
-        }catch (FileNotFoundException e) {
-            e.printStackTrace();
+        }catch (Exception e) {
+            throw new RuntimeException("加载图片时出错", e);
         }
         
         File file = new File(context.getExternalFilesDir("SaveImages"), "SaveImage" + (id + 1) + ".png");
@@ -79,14 +90,8 @@ public class SaveDao {
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
             out.flush();
             out.close();
-        }catch(IOException e) {
-            e.printStackTrace();
-        }finally {
-            try {
-                out.close();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
+        }catch(Exception e) {
+            throw new RuntimeException("写入图片时出错", e);
         }
         
         //设置基本信息
@@ -101,25 +106,69 @@ public class SaveDao {
     
     public Save getSave(int id) {
         Context context = MinecraftParticleApplication.context;
-        ObjectInputStream ois = null;
+        //ObjectInputStream ois = null;
+        BufferedReader br = null;
         Save save = null;
         try {
-            ois = new ObjectInputStream(
-                new FileInputStream(
-                new File(context.getExternalFilesDir("Saves"), 
-                        "Save" + id + ".particle")));
-            save = (Save)ois.readObject();
-            ois.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                ois.close();
-            } catch (IOException ex) {
-                ex.printStackTrace();
+//            ois = new ObjectInputStream(
+//                new FileInputStream(
+//                new File(context.getExternalFilesDir("Saves"),
+//                        "Save" + id + ".particle")));
+            br = new BufferedReader(new FileReader(new File(context.getExternalFilesDir("Saves"),
+                    "Save" + id + ".particle")));
+            StringBuilder sb = new StringBuilder();
+            String line;
+            while((line = br.readLine()) != null) {
+                sb.append(line).append("\n");
             }
+            save = new Gson().fromJson(sb.toString(), Save.class);
+            switch (save.getType()) {
+                case CIRCLE:
+                    save = new Gson().fromJson(sb.toString(), SaveCircle.class);
+                    break;
+                case ELLIPSE:
+                    save = new Gson().fromJson(sb.toString(), SaveEllipse.class);
+                    break;
+                case POLYGON:
+                    save = new Gson().fromJson(sb.toString(), SavePolygon.class);
+                    break;
+                case STAR:
+                    save = new Gson().fromJson(sb.toString(), SaveStar.class);
+                    break;
+                case SPHERE:
+                    save = new Gson().fromJson(sb.toString(), SaveSphere.class);
+                    break;
+                case LINE:
+                    save = new Gson().fromJson(sb.toString(), SaveLine.class);
+                    break;
+                case PARABOLA:
+                    save = new Gson().fromJson(sb.toString(), SaveParabola.class);
+                    break;
+                case HELIX:
+                    save = new Gson().fromJson(sb.toString(), SaveHelix.class);
+                    break;
+                case SPIRALPARABOLA:
+                    save = new Gson().fromJson(sb.toString(), SaveSprialParabola.class);
+                    break;
+                case ARC:
+                    save = new Gson().fromJson(sb.toString(), SaveArc.class);
+                    break;
+                case FOURIER:
+                    save = new Gson().fromJson(sb.toString(), SaveFourier.class);
+                    break;
+                case FUNCTION:
+                    save = new Gson().fromJson(sb.toString(), SaveFunction.class);
+                    break;
+                case IMAGE:
+                    save = new Gson().fromJson(sb.toString(), SaveImage.class);
+                    break;
+                default:
+                    save = new Gson().fromJson(sb.toString(), SaveCircle.class);
+            }
+            //save = (Save)ois.readObject();
+            //ois.close();
+        } catch (Exception e) {
+            throw new RuntimeException("获取保存时出错", e);
         }
         return save;
     }
@@ -132,11 +181,11 @@ public class SaveDao {
         new File(context.getExternalFilesDir("SaveImages"), "SaveImage" + id + ".png").delete();
         SharedPreferences sp = context.getSharedPreferences("Save", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
-        editor.putInt("save_num", sp.getInt("save_num", 0) - 1);
+        editor.putInt("saveNum", sp.getInt("saveNum", 0) - 1);
         editor.apply();
         
         //重新排序Save
-        for(int i = id + 1;i <= sp.getInt("save_num", 0) + 1;i++) {
+        for(int i = id + 1;i <= sp.getInt("saveNum", 0) + 1;i++) {
             //Save文件
             File saveFile = new File(context.getExternalFilesDir("Saves"), "Save" + i + ".particle");
             saveFile.renameTo(new File(context.getExternalFilesDir("Saves"), "Save" + (i - 1) + ".particle"));
@@ -218,22 +267,23 @@ public class SaveDao {
         Context context = MinecraftParticleApplication.context;
         
         //Save对象本地化保存
-        ObjectOutputStream oos = null;
+        //ObjectOutputStream oos = null;
+        BufferedWriter bw = null;
         try {
-            oos = new ObjectOutputStream(
-                new FileOutputStream(
-                new File(context.getExternalFilesDir("Saves"), 
-                        "Save" + save.getId() + ".particle")));
-            oos.writeObject(save);
-            oos.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                oos.close();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
+            String json = new Gson().toJson(save);
+            bw = new BufferedWriter(new FileWriter(new File(context.getExternalFilesDir("Saves"),
+                    "Save" + save.getId() + ".particle")));
+//            oos = new ObjectOutputStream(
+//                new FileOutputStream(
+//                new File(context.getExternalFilesDir("Saves"),
+//                        "Save" + save.getId() + ".particle")));
+            bw.write(json);
+            bw.flush();
+            bw.close();
+            //oos.writeObject(save);
+            //oos.close();
+        } catch (Exception e) {
+            throw new RuntimeException("写入保存时出错", e);
         }
     }
 }

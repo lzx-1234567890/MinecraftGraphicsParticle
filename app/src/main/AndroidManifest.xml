@@ -7,6 +7,10 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-feature android:glEsVersion="0x00020000" android:required="true" />
 
@@ -22,8 +26,7 @@
         android:theme="@style/AppTheme">
         
         <activity 
-            android:name=".MainActivity" 
-            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:name=".ui.activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action 
@@ -34,21 +37,20 @@
         </activity>
         
         <activity
-            android:name=".ui.draw.DrawActivity" 
-            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:name=".ui.activity.DrawActivity"
             android:exported="true">
         </activity>
         
         <activity
-            android:name=".ui.tutorial.TutorialActivity" 
+            android:name=".ui.activity.TutorialActivity"
             android:exported="true">
         </activity>
         
-        <activity
-            android:name=".ui.main_save.SaveItemModifyActivity" 
-            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
-            android:exported="true">
-        </activity>
+<!--        <activity-->
+<!--            android:name=".ui.activity.SaveItemModifyActivity"-->
+<!--            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"-->
+<!--            android:exported="true">-->
+<!--        </activity>-->
         
         
         

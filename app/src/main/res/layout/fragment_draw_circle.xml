@@ -28,37 +28,54 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/drawParamCategoryTitle"
-                    android:text="位置" />
+                    android:text="@string/draw_param_category_position" />
 
-                <com.lzx.minecraftparticle.ui.draw.param.widgets.CoordinateParamView
-                    android:id="@+id/coordinateParamView"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="5dp"
-                    app:cpvHint_x="输入X坐标"
-                    app:cpvHint_y="输入Y坐标"
-                    app:cpvHint_z="输入Z坐标"
-                    app:cpvInput_x="0"
-                    app:cpvInput_y="0"
-                    app:cpvInput_z="0" />
+                    android:orientation="horizontal">
 
+                    <com.lzx.minecraftparticle.ui.view.NormalParamView
+                        android:id="@+id/coordinateXParamView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:npvHint="@string/draw_param_circle_coordinateX"
+                        app:npvInputType="numberDecimal|numberSigned" />
 
-                <com.lzx.minecraftparticle.ui.draw.param.widgets.NormalParamView
+                    <com.lzx.minecraftparticle.ui.view.NormalParamView
+                        android:id="@+id/coordinateYParamView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:npvHint="@string/draw_param_circle_coordinateY"
+                        app:npvInputType="numberDecimal|numberSigned" />
+
+                    <com.lzx.minecraftparticle.ui.view.NormalParamView
+                        android:id="@+id/coordinateZParamView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:npvHint="@string/draw_param_circle_coordinateZ"
+                        app:npvInputType="numberDecimal|numberSigned" />
+
+                </LinearLayout>
+
+                <com.lzx.minecraftparticle.ui.view.NormalParamView
                     android:id="@+id/hAngleParamView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="5dp"
-                    app:npvHint="输入水平角(度，-180~180)"
-                    
+                    app:npvHint="@string/draw_param_regular_hAngle"
                     app:npvInputType="numberDecimal|numberSigned" />
 
-                <com.lzx.minecraftparticle.ui.draw.param.widgets.NormalParamView
+                <com.lzx.minecraftparticle.ui.view.NormalParamView
                     android:id="@+id/vAngleParamView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="5dp"
-                    app:npvHint="输入竖直角(度，-90~90)"
-                    
+                    app:npvHint="@string/draw_param_regular_vAngle"
                     app:npvInputType="numberSigned|numberDecimal" />
 
             </LinearLayout>
@@ -84,15 +101,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/drawParamCategoryTitle"
-                    android:text="大小" />
+                    android:text="@string/draw_param_category_size" />
 
-                <com.lzx.minecraftparticle.ui.draw.param.widgets.NormalParamView
+                <com.lzx.minecraftparticle.ui.view.NormalParamView
                     android:id="@+id/radiusParamView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="5dp"
-                    app:npvHint="输入半径(格)"
-                    
+                    app:npvHint="@string/draw_param_regular_radius"
                     app:npvInputType="numberDecimal" />
 
             </LinearLayout>
@@ -117,15 +133,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/drawParamCategoryTitle"
-                    android:text="精度" />
+                    android:text="@string/draw_param_category_precision" />
 
-                <com.lzx.minecraftparticle.ui.draw.param.widgets.NormalParamView
+                <com.lzx.minecraftparticle.ui.view.NormalParamView
                     android:id="@+id/stepParamView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="5dp"
-                    app:npvHint="输入步长(度)"
-                    
+                    app:npvHint="@string/draw_param_regular_step"
                     app:npvInputType="numberDecimal" />
 
             </LinearLayout>
@@ -150,15 +165,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/drawParamCategoryTitle"
-                    android:text="粒子" />
+                    android:text="@string/draw_param_category_particle" />
 
-                <com.lzx.minecraftparticle.ui.draw.param.widgets.ParticleCategoryParamView
+                <com.lzx.minecraftparticle.ui.view.ParticleCategoryParamView
                     android:id="@+id/particleParamView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="5dp"
-                    app:pcpvHint="输入粒子种类"
-                    />
+                    app:pcpvHint="@string/draw_param_particle" />
 
             </LinearLayout>
 
@@ -182,23 +196,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/drawParamCategoryTitle"
-                    android:text="文件" />
+                    android:text="@string/draw_param_category_file" />
 
-                <com.lzx.minecraftparticle.ui.draw.param.widgets.PathParamView
+                <com.lzx.minecraftparticle.ui.view.PathParamView
                     android:id="@+id/filePathParamView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="5dp"
-                    app:ppvHint="输入保存路径"
+                    app:ppvHint="@string/draw_param_filePath"
                     />
 
-                <com.lzx.minecraftparticle.ui.draw.param.widgets.NormalParamView
+                <com.lzx.minecraftparticle.ui.view.NormalParamView
                     android:id="@+id/fileNameParamView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="5dp"
-                    app:npvHint="输入保存名称"
-                    
+                    app:npvHint="@string/draw_param_fileName"
                     app:npvInputType="text" />
 
             </LinearLayout>
@@ -211,7 +224,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
             android:layout_marginVertical="5dp"
-            android:text="确定"
+            android:text="@string/draw_param_create"
             android:textAppearance="@style/buttonText"
             android:textColor="@color/buttonText"
             app:backgroundTint="@color/buttonBackground"
